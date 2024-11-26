@@ -34,8 +34,12 @@ Route::get('/about/{name}',function($name){
 
 Route::get('user',[UserController::class,'getUser']);
 
-Route::get('about',[UserController::class,'aboutUser']);
+Route::get('user-about/{name}',[UserController::class,'aboutUser']);
 
 Route::get('user/{name}',[UserController::class,'getUserName']);
 
-Route::get('user',[UserController::class,'adminLogin']);
+Route::get('admin-login',[UserController::class,'adminLogin']);
+
+Route::view('/home2','home2');
+
+Route::get('user-home',[UserController::class,'userHome']);
